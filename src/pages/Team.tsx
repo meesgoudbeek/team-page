@@ -5,7 +5,6 @@ import FilterButtons from '../components/FilterButtons';
 import { FetchProps } from '../types/data';
 
 const Team: React.FC<FetchProps> = ({ Data, loading, error }) => {
-  console.log(Data);
   const [item, setItem] = useState(Data);
 
   const menuItems = [...new Set(Data.map((Val: any) => Val.location))];
@@ -16,6 +15,7 @@ const Team: React.FC<FetchProps> = ({ Data, loading, error }) => {
     });
     setItem(newItem);
   };
+
   return (
     <div className="container">
       <h1>TEAM</h1>

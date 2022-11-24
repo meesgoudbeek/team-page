@@ -4,10 +4,23 @@
     width: 100%;
     position: relative;
     background-color: $secondary-gray;
+  }
+}
 
-    .content {
-      padding: 0 20px 20px 20px;
-    }
+.content {
+  padding: 0 20px 20px 20px;
+
+  &__name {
+    font-size: 1.2rem;
+    color: $text-gray;
+  }
+
+  &__role {
+    font-size: 1.2rem;
+  }
+
+  &__tag {
+    margin-right: 10px;
   }
 }
 

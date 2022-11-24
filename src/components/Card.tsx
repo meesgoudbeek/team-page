@@ -12,9 +12,13 @@ const Card: React.FC<CardProps> = ({ item }) => {
                   <img src={member.image + '?' + index} alt="Team member" />
                 </div>
                 <div className="content">
-                  <p>{member.name}</p>
-                  <p>{member.role}</p>
-                  <p>{member.tags}</p>
+                  <p className="content__name">{member.name}</p>
+                  <p className="content__role">{member.role}</p>
+                  {member.tags.map((tag, index) => (
+                    <span key={index} className="content__tag">
+                      #{tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>

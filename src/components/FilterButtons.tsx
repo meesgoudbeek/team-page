@@ -8,22 +8,15 @@ const FilterButtons: React.FC<FilterButtonsProps> = ({
 }) => {
   return (
     <>
-      <div className="d-flex justify-content-center">
+      <div className="">
         {menuItems.map((Val: any, id: any) => {
           return (
-            <button
-              className="btn-dark text-white p-1 px-2 mx-5 btn fw-bold"
-              onClick={() => filterItem(Val)}
-              key={id}
-            >
+            <button className="" onClick={() => filterItem(Val)} key={id}>
               {Val}
             </button>
           );
         })}
-        <button
-          className="btn-dark text-white p-1 px-3 mx-5 fw-bold btn"
-          onClick={() => setItem(data)}
-        >
+        <button className="" onClick={() => setItem(data)}>
           All
         </button>
       </div>
