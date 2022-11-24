@@ -10,7 +10,6 @@
 }
 
 .grid-item {
-  height: 550px;
   flex-basis: 20%;
   -ms-flex: auto;
   width: 259px;
@@ -18,6 +17,7 @@
   padding: 10px;
   box-sizing: border-box;
 }
+
 @media (max-width: 1073px) {
   .grid-item {
     flex-basis: 33.33%;
