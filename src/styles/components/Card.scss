@@ -1,4 +1,10 @@
 .card {
+  flex-basis: 20%;
+  -ms-flex: auto;
+  width: 259px;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
   &__container {
     height: 100%;
     width: 100%;
@@ -7,12 +13,21 @@
   }
 }
 
+.image {
+  &__img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .content {
-  padding: 0 20px 20px 20px;
+  padding: 20px;
 
   &__name {
     font-size: 1.2rem;
     color: $text-gray;
+    text-transform: uppercase;
   }
 
   &__role {
@@ -24,8 +39,18 @@
   }
 }
 
-img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
+@media (max-width: 1073px) {
+  .card {
+    flex-basis: 33.33%;
+  }
+}
+@media (max-width: 815px) {
+  .card {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 555px) {
+  .card {
+    flex-basis: 100%;
+  }
 }

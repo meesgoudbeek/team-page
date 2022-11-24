@@ -7,4 +7,16 @@
 
 body {
   background-color: $primary-gray;
+  overflow-y: scroll;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 5rem;
+  color: $secondary-gray;
+  margin: 80px 0 80px 0;
 }

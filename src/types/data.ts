@@ -1,7 +1,5 @@
 export interface FetchProps {
   Data: any;
-  loading: boolean;
-  error: Error;
 }
 
 export interface MemberProps {

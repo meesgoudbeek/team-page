@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import Loader from '../components/Loader';
 import Card from '../components/Card';
 import FilterButtons from '../components/FilterButtons';
 import { FetchProps } from '../types/data';
 
-const Team: React.FC<FetchProps> = ({ Data, loading, error }) => {
+const Team: React.FC<FetchProps> = ({ Data }) => {
   const [item, setItem] = useState(Data);
 
   const menuItems = [...new Set(Data.map((Val: any) => Val.location))];
@@ -18,15 +17,15 @@ const Team: React.FC<FetchProps> = ({ Data, loading, error }) => {
 
   return (
     <div className="container">
-      <h1>TEAM</h1>
-      <FilterButtons
-        filterItem={filterItem}
-        setItem={setItem}
-        menuItems={menuItems}
-        data={Data}
-      />
-      {loading && <Loader />}
-      {error && <p>Something went wrong...</p>}
+      <header>
+        <h1>TEAM</h1>
+        <FilterButtons
+          filterItem={filterItem}
+          setItem={setItem}
+          menuItems={menuItems}
+          data={Data}
+        />
+      </header>
       {Data && (
         <div className="grid-row">
           <Card item={item} />

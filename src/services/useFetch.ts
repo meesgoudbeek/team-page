@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 const useFetch = (url: string, options?: object) => {
   const [response, setResponse] = useState<any>(null)
   const [error, setError] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<any>(false);
 useEffect(() => {
     const abortController = new AbortController();
     const signal = abortController.signal;

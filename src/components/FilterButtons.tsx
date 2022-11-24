@@ -8,17 +8,21 @@ const FilterButtons: React.FC<FilterButtonsProps> = ({
 }) => {
   return (
     <>
-      <div className="">
+      <div className="filterButtons">
+        <button className="filterButtons__button" onClick={() => setItem(data)}>
+          All
+        </button>
         {menuItems.map((Val: any, id: any) => {
           return (
-            <button className="" onClick={() => filterItem(Val)} key={id}>
+            <button
+              className="filterButtons__button"
+              onClick={() => filterItem(Val)}
+              key={id}
+            >
               {Val}
             </button>
           );
         })}
-        <button className="" onClick={() => setItem(data)}>
-          All
-        </button>
       </div>
     </>
   );
