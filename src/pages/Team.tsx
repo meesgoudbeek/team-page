@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import Card from '../components/Card';
 import FilterButtons from '../components/FilterButtons';
-import { FetchProps } from '../types/data';
 
-const Team: React.FC<FetchProps> = ({ Data }) => {
+const Team = ({ Data }: any) => {
   const [item, setItem] = useState(Data);
 
-  const menuItems = [...new Set(Data.map((Val: any) => Val.location))];
+  const locations = [...new Set(Data.map((Val: any) => Val.location))];
 
   const filterItem = (curcat: any) => {
     const newItem = Data.filter((newVal: any) => {
@@ -22,7 +21,7 @@ const Team: React.FC<FetchProps> = ({ Data }) => {
         <FilterButtons
           filterItem={filterItem}
           setItem={setItem}
-          menuItems={menuItems}
+          locations={locations}
           data={Data}
         />
       </header>

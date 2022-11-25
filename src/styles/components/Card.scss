@@ -5,11 +5,17 @@
   position: relative;
   padding: 10px;
   box-sizing: border-box;
+  transition-duration: 0.5s;
   &__container {
     height: 100%;
     width: 100%;
     position: relative;
     background-color: $secondary-gray;
+  }
+
+  &:hover {
+    padding: 0;
+    transition-duration: 0.5s;
   }
 }
 
@@ -17,7 +23,6 @@
   &__img {
     height: 300px;
     width: 100%;
-    object-fit: cover;
   }
 }
 
@@ -47,6 +52,11 @@
 @media (max-width: 815px) {
   .card {
     flex-basis: 50%;
+
+    &:hover {
+      transition-property: none;
+      padding: 10px;
+    }
   }
 }
 @media (max-width: 555px) {

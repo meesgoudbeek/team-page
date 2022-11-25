@@ -1,23 +1,23 @@
 import { FilterButtonsProps } from '../types/data';
 
-const FilterButtons: React.FC<FilterButtonsProps> = ({
+const FilterButtons = ({
   data,
   setItem,
-  menuItems,
+  locations,
   filterItem,
-}) => {
+}: FilterButtonsProps) => {
   return (
     <>
       <div className="filterButtons">
         <button className="filterButtons__button" onClick={() => setItem(data)}>
           All
         </button>
-        {menuItems.map((Val: any, id: any) => {
+        {locations.map((Val: any, index: number) => {
           return (
             <button
               className="filterButtons__button"
               onClick={() => filterItem(Val)}
-              key={id}
+              key={index}
             >
               {Val}
             </button>

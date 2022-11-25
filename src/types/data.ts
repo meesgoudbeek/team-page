@@ -1,7 +1,3 @@
-export interface FetchProps {
-  Data: any;
-}
-
 export interface MemberProps {
   name: string;
   role: string;
@@ -10,13 +6,15 @@ export interface MemberProps {
   tags: Array<string>;
 }
 
-export interface CardProps {
-  item: any;
+export interface FilterButtonsProps {
+data: any;
+setItem: any; 
+locations: any; 
+filterItem: any;
 }
 
-export interface FilterButtonsProps {
-data: any; 
-setItem: any; 
-menuItems: any; 
-filterItem: any;
+export interface LightboxProps {
+  src: string;
+  alt: string;
+  children?: React.ReactNode;
 }

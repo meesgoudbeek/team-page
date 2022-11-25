@@ -15,6 +15,7 @@
 
     &:hover {
       background-color: $primary-cta;
+      transition: background-color 0.5s;
     }
   }
 }

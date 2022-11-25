@@ -1,6 +1,7 @@
-import { CardProps, MemberProps } from '../types/data';
+import { MemberProps } from '../types/data';
+import LightBox from './Lightbox';
 
-const Card: React.FC<CardProps> = ({ item }) => {
+const Card = ({ item }: any) => {
   return (
     <>
       {item.map((member: MemberProps, index: number) => {
@@ -8,11 +9,13 @@ const Card: React.FC<CardProps> = ({ item }) => {
           <div key={member.name} className="card">
             <div className="card__container">
               <div className="image">
-                <img
-                  className="image__img"
-                  src={member.image + '?' + index}
-                  alt="Team member"
-                />
+                <LightBox src={member.image + '?' + index} alt={member.name}>
+                  <img
+                    className="image__img"
+                    src={member.image + '?' + index}
+                    alt={member.name}
+                  />
+                </LightBox>
               </div>
               <div className="content">
                 <p className="content__name">{member.name}</p>
